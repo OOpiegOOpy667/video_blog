@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Panel Admin - Video Blog</title>
+</head>
+<body>
+    {% if not session.get('logged_in') %}
+        <h1>Connexion Admin</h1>
+        <form method="post">
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        {% if error %}
+            <p style="color:red;">{{ error }}</p>
+        {% endif %}
+    {% else %}
+        <h1>Panel Admin</h1>
+        <p>Bienvenue sur le panel admin. Ici sera bientôt disponible une interface de publication de vidéos.</p>
+        <p>Je n'ai pas prévu de stocker mes mots de passe ici, ce serait trop risqué ah-ah-ah-ah-ah-ah-ah-ah-ah.</p>
+        <form method="post" action="{{ url_for('logout') }}">
+            <button type="submit">Déconnexion</button>
+        </form>
+    {% endif %}
+</body>
+</html>
