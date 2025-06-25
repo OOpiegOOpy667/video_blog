@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 import sqlite3
 import os
+from werkzeug.security import check_password_hash
 
 app = Flask(__name__)
 app.secret_key = "videoblogsecretkey123"  # Clé secrète pour les sessions
@@ -52,11 +53,11 @@ def admin():
         # Vérifier si le mot de passe existe dans la table admin
         conn = get_db_connection()
         cursor = conn.cursor()
-        admin_users = cursor.execute('SELECT password FROM admin').fetchall()
+        admin_users = cursor.execute('SELECT password_hash FROM admin').fetchall()
         conn.close()
         
-        # Vérifier si le mot de passe soumis correspond à l'un des mots de passe dans la base
-        if any(password == row['password'] for row in admin_users):
+        # Vérifier si le mot de passe soumis correspond à l'un des mots de passe hachés dans la base
+        if any(check_password_hash(row['password_hash'], password) for row in admin_users):
             session['logged_in'] = True
             return redirect(url_for('admin'))
         else:

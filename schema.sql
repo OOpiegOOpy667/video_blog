@@ -1,4 +1,4 @@
 CREATE TABLE IF NOT EXISTS admin (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    password TEXT NOT NULL
+    password_hash TEXT NOT NULL
 );
