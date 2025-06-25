@@ -1,5 +1,5 @@
 body {
-    background: #f0f0f0;
+    background: #ffe0f7; /* plus rose */
     color: #222;
     font-family: "Comic Sans MS", cursive, sans-serif;
     margin: 0;
@@ -7,46 +7,55 @@ body {
 }
 
 header {
-    background: #ff00ff;
+    background: #ff69b4; /* rose vif */
     color: #00ffff;
     padding: 20px;
     text-align: center;
     font-size: 2em;
-    border-bottom: 5px dashed #000;
+    border-bottom: 5px dashed #ffb6c1; /* bordure rose clair */
 }
 
 main {
     margin: 30px;
     padding: 20px;
-    background: #ffff99;
-    border: 3px solid #ff0000;
+    background: #fff0f6; /* fond rose très pâle */
+    border: 3px solid #ff69b4; /* bordure rose */
 }
 
 h1, h2, h3 {
     font-family: Impact, Charcoal, sans-serif;
-    color: #ff0000;
-    text-shadow: 2px 2px 0 #00ff00;
+    color: #ff1493; /* rose profond */
+    text-shadow: 2px 2px 0 #ffb6c1; /* ombre rose clair */
 }
 
 a {
-    color: #0000ff;
+    color: #e75480; /* rose foncé */
     text-decoration: underline wavy #ff00ff;
 }
 
 button {
-    background: #00ff00;
+    background: #ffb6c1; /* bouton rose clair */
     color: #ff00ff;
-    border: 2px solid #000;
+    border: 2px solid #ff69b4; /* bordure rose */
     padding: 10px 30px;
     font-size: 1.2em;
     cursor: pointer;
     border-radius: 0;
 }
 
+/* password, mot de passe, password input */
+input[type="password"] {
+    background: #ffe4e1; /* fond rose pâle */
+    color: #ff1493; /* texte rose profond */
+    border: 2px solid #ff69b4; /* bordure rose vif */
+    padding: 10px;
+    font-size: 1em;
+}
+
 footer {
-    background: #222;
+    background: #ff69b4; /* fond rose vif */
     color: #fff;
     text-align: center;
     padding: 10px;
-    border-top: 5px dotted #ff0;
+    border-top: 5px dotted #ffb6c1; /* bordure rose clair */
 }
