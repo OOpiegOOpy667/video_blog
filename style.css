@@ -1,0 +1,52 @@
+body {
+    background: #f0f0f0;
+    color: #222;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #ff00ff;
+    color: #00ffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    border-bottom: 5px dashed #000;
+}
+
+main {
+    margin: 30px;
+    padding: 20px;
+    background: #ffff99;
+    border: 3px solid #ff0000;
+}
+
+h1, h2, h3 {
+    font-family: Impact, Charcoal, sans-serif;
+    color: #ff0000;
+    text-shadow: 2px 2px 0 #00ff00;
+}
+
+a {
+    color: #0000ff;
+    text-decoration: underline wavy #ff00ff;
+}
+
+button {
+    background: #00ff00;
+    color: #ff00ff;
+    border: 2px solid #000;
+    padding: 10px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-top: 5px dotted #ff0;
+}
